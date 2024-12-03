@@ -50,7 +50,7 @@ public class Account {
 	public String getDob() {
 		return dob;
 	}
-	public void setDob(String dob) {
+	public void setDob( String dob) {
 		this.dob = dob;
 	}
 	public String getGender() {
