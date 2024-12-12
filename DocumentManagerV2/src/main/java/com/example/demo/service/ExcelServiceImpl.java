@@ -9,7 +9,7 @@ public class ExcelServiceImpl extends GenericDocument{
 
 	@Override
 	public void printData() {
-		System.out.println("Printing data of PDF");	
+		System.out.println("Printing data of Excel");	
 	}
 
 }
