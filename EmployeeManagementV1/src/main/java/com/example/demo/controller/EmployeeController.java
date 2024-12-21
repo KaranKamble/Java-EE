@@ -36,7 +36,10 @@ public class EmployeeController {
 	}	*/
 	
 		//Case : 3		DI using Constructor
-	private EmployeeService service;
+	
+	@Autowired
+	private EmployeeService service;   //4. Field  injection
+	
 	public EmployeeController(EmployeeService service ) {
 		this.service = service;
 	}
@@ -45,4 +48,7 @@ public class EmployeeController {
 		service.addEmployee(emp);
 		return emp.getName() + " added";
 	}
+	
+	
+	
 }
