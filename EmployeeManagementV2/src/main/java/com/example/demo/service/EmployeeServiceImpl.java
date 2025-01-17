@@ -1,4 +1,6 @@
 package com.example.demo.service;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.entity.Employee;
@@ -23,6 +25,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void removeEmployee(int empId) {
 		empRepo.deleteById(empId);
+	}
+
+	@Override
+	public List<Employee> findAllEmployee() {
+		return empRepo.findAll();
 	}
 
 }
