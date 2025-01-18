@@ -1,7 +1,7 @@
 package com.silent.main.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,16 +22,16 @@ public class Train {
 	private LocalDate departureDate;
 	@Temporal(TemporalType.DATE)
 	private LocalDate arrivalDate;
-	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime departureTime;
-	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime arrivalTime;
+	@Temporal(TemporalType.TIME)
+	private LocalTime departureTime;
+	@Temporal(TemporalType.TIME)
+	private LocalTime arrivalTime;
 
 	public Train() {
 	}
 
 	public Train(int id, String trainName, String source, String destination, LocalDate departureDate, LocalDate arrivalDate,
-			LocalDateTime departureTime, LocalDateTime arrivalTime) {
+			LocalTime departureTime, LocalTime arrivalTime) {
 		this.id = id;
 		this.trainName = trainName;
 		this.source = source;
@@ -90,19 +90,19 @@ public class Train {
 		this.arrivalDate = arrivalDate;
 	}
 
-	public LocalDateTime getDepartureTime() {
+	public LocalTime getDepartureTime() {
 		return departureTime;
 	}
 
-	public void setDepartureTime(LocalDateTime departureTime) {
+	public void setDepartureTime(LocalTime departureTime) {
 		this.departureTime = departureTime;
 	}
 
-	public LocalDateTime getArrivalTime() {
+	public LocalTime getArrivalTime() {
 		return arrivalTime;
 	}
 
-	public void setArrivalTime(LocalDateTime arrivalTime) {
+	public void setArrivalTime(LocalTime arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
 
