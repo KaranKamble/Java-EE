@@ -18,6 +18,7 @@ public class Train {
 	private String trainName;
 	private String source;
 	private String destination;
+	
 	@Temporal(TemporalType.DATE)
 	private LocalDate departureDate;
 	@Temporal(TemporalType.DATE)
@@ -26,6 +27,7 @@ public class Train {
 	private LocalTime departureTime;
 	@Temporal(TemporalType.TIME)
 	private LocalTime arrivalTime;
+	
 
 	public Train() {
 	}

@@ -47,4 +47,9 @@ public class TrainServiceImpl implements TrainService {
 		return "Train with id " + id + " has removed from RDBMS ";
 	}
 
+	@Override
+	public List<Train> findSourceAndDestination(String source, String destination) {
+		return repo.findBySourceAndDestination(source, destination);
+	}
+
 }

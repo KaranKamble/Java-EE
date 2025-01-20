@@ -9,4 +9,5 @@ public interface TrainService {
 	public Train findTrainById( int id );
 	public List<Train> findAllTrain();
 	public String removeTrainById( int id );
+	public List<Train> findSourceAndDestination( String source, String destination );
 }
