@@ -5,9 +5,9 @@ import com.silent.main.entity.Train;
 
 public interface TrainService {
 
-	public String addTrain( Train train );
-	public Train findTrainById( int id );
-	public List<Train> findAllTrain();
-	public String removeTrainById( int id );
-	public List<Train> findSourceAndDestination( String source, String destination );
+	String addTrain( Train train );
+	Train findTrainById( int id );
+	List<Train> findAllTrain();
+	String removeTrainById( int id );
+	List<Train> findSourceAndDestination( String source, String destination );
 }

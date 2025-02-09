@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>EmployeeManagementV3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EmployeeManagementV3</name>
+	<name>EmployeeManagementV2</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
