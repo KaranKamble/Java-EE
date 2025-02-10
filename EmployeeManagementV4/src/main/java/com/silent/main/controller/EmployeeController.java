@@ -20,25 +20,14 @@ public class EmployeeController {
 	private EmployeeService service;
 
 	@PostMapping("/add")
-	public ResponseEntity<String> saveEmployee(@RequestBody Employee employeee) {
-		try {
-			service.addEmployee(employeee);
-		} catch (Exception ex) {
-			return new ResponseEntity<String>(ex.getMessage(), HttpStatus.BAD_REQUEST);
-		}
-
+	public ResponseEntity<String> saveEmployee(@RequestBody Employee employee) {
+		service.addEmployee(employee);
 		return new ResponseEntity<String>("Employee Added", HttpStatus.CREATED);
 	}
-	
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Object> fetchEmployee(@PathVariable("id") int id ){
-		Employee emp = null;
-		try {
-			 emp = service.getEmployee(id);
-		}catch( Exception ex ) {
-			return new ResponseEntity<Object>(ex.getMessage(), HttpStatus.BAD_REQUEST);
-		}
-		return new ResponseEntity<Object>(emp, HttpStatus.OK);	
+	public ResponseEntity<Object> fetchEmployee(@PathVariable("id") int id) {
+		Employee emp = service.getEmployee(id);
+		return new ResponseEntity<Object>(emp, HttpStatus.OK);
 	}
 }
