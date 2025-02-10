@@ -14,6 +14,7 @@ public class GlobalException {
 		return new ResponseEntity<Object>(serviceException.getMessage(),HttpStatus.BAD_REQUEST);
 	}
 	
+	@ExceptionHandler( Exception.class )
 	public ResponseEntity<Object> genericExceptionHandler( Exception exception ) {
 		return new ResponseEntity<Object>("something went wrong, Please try later",HttpStatus.BAD_REQUEST);
 	}
