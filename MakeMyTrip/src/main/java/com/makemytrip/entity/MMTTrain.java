@@ -10,7 +10,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="tbl_mmttrain")
+@Table(name = "tbl_mmttrain")
 public class MMTTrain {
 
 	@Id
@@ -27,7 +27,7 @@ public class MMTTrain {
 
 	private int totalSeats;
 	private int availableSeats;
-	
+
 	public MMTTrain() {
 	}
 
@@ -106,5 +106,5 @@ public class MMTTrain {
 	public void setAvailableSeats(int availableSeats) {
 		this.availableSeats = availableSeats;
 	}
-	
+
 }
